@@ -1,0 +1,28 @@
+# Kaggle credentials 
+~/.kaggle/kaggle.json
+.kaggle/
+
+# Raw data (tracked by DVC, not Git)
+data/raw/
+data/processed/
+
+# Python stuff
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# MLflow/experiment tracking
+mlruns/
+.mlflow/
+
+# DVC cache (optional — DVC handles this)
+.dvc/cache

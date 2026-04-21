@@ -3,8 +3,8 @@
 .kaggle/
 
 # Raw data (tracked by DVC, not Git)
-data/raw/
-data/processed/
+data/raw/*.csv
+!data/raw/*.dvc
 
 # Python stuff
 __pycache__/

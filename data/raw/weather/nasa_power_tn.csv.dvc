@@ -1,0 +1,5 @@
+outs:
+- md5: ca0ef6c70d2ab179f65c0542474f2b8d
+  size: 20238776
+  hash: md5
+  path: nasa_power_tn.csv

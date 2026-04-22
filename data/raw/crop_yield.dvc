@@ -1,0 +1,6 @@
+outs:
+- md5: 12aba5c3089b2b1b365760dcafcc29a9.dir
+  size: 30991860
+  nfiles: 1
+  hash: md5
+  path: crop_yield

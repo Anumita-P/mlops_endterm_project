@@ -1,0 +1,6 @@
+outs:
+- md5: 4ad78d3594daaa4246e48f25e71aed1a.dir
+  size: 2397
+  nfiles: 3
+  hash: md5
+  path: schemes_msp

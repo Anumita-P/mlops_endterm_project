@@ -1,0 +1,111 @@
+[2026-04-24T20:59:08.117+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:54:03.135778+00:00 [queued]>
+[2026-04-24T20:59:08.165+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:54:03.135778+00:00 [queued]>
+[2026-04-24T20:59:08.191+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-24T20:59:08.260+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): merge_and_process_data> on 2026-04-24 20:54:03.135778+00:00
+[2026-04-24T20:59:08.275+0000] {standard_task_runner.py:60} INFO - Started process 305 to run task
+[2026-04-24T20:59:08.281+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data_merge_pipeline', 'merge_and_process_data', 'manual__2026-04-24T20:54:03.135778+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/data_merge_dag.py', '--cfg-path', '/tmp/tmp13k90den']
+[2026-04-24T20:59:08.290+0000] {standard_task_runner.py:88} INFO - Job 20: Subtask merge_and_process_data
+[2026-04-24T20:59:08.332+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-24T20:59:08.376+0000] {task_command.py:423} INFO - Running <TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:54:03.135778+00:00 [running]> on host efe38e3d6854
+[2026-04-24T20:59:08.467+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='data_merge_pipeline' AIRFLOW_CTX_TASK_ID='merge_and_process_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-24T20:54:03.135778+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-24T20:54:03.135778+00:00'
+[2026-04-24T20:59:08.470+0000] {data_merge_dag.py:46} INFO - 
+================================================================================
+[2026-04-24T20:59:08.470+0000] {data_merge_dag.py:47} INFO - MLOPS DATA MERGE PIPELINE - STARTED
+[2026-04-24T20:59:08.471+0000] {data_merge_dag.py:48} INFO - ================================================================================
+[2026-04-24T20:59:08.471+0000] {data_merge_dag.py:52} INFO - 
+[1/6] Loading Weather Data (NASA POWER)...
+[2026-04-24T20:59:08.872+0000] {data_merge_dag.py:59} INFO -   ✓ Loaded 257,152 daily weather records
+[2026-04-24T20:59:08.873+0000] {data_merge_dag.py:60} INFO -   Columns: ['district', 'latitude', 'longitude', 'date', 'year', 'month', 'T2M', 'T2M_MAX', 'T2M_MIN', 'PRECTOTCORR', 'RH2M', 'WS10M']
+[2026-04-24T20:59:08.889+0000] {data_merge_dag.py:61} INFO -   Date range: 2000-01-01 to 2021-12-31
+[2026-04-24T20:59:08.897+0000] {data_merge_dag.py:62} INFO -   Unique districts: 32
+[2026-04-24T20:59:08.944+0000] {data_merge_dag.py:78} INFO -   ✓ Weather data validated and standardized
+[2026-04-24T20:59:08.945+0000] {data_merge_dag.py:81} INFO - 
+[2/6] Loading Crop Yield Data...
+[2026-04-24T20:59:09.672+0000] {data_merge_dag.py:88} INFO -   ✓ Loaded 345,407 total crop records
+[2026-04-24T20:59:09.685+0000] {data_merge_dag.py:92} INFO -   Filtered to 18,525 Tamil Nadu records
+[2026-04-24T20:59:09.687+0000] {data_merge_dag.py:96} INFO -   Filtered to 1,464 Rice + Sugarcane records
+[2026-04-24T20:59:09.690+0000] {data_merge_dag.py:108} INFO -   ✓ Yield data validated (1,464 records)
+[2026-04-24T20:59:09.691+0000] {data_merge_dag.py:109} INFO -   Crops: ['Rice', 'Sugarcane']
+[2026-04-24T20:59:09.692+0000] {data_merge_dag.py:110} INFO -   Year range: 1998-99-2019-20
+[2026-04-24T20:59:09.693+0000] {data_merge_dag.py:113} INFO - 
+[3/6] Aggregating Daily Weather to Yearly Features...
+[2026-04-24T20:59:09.740+0000] {data_merge_dag.py:128} INFO -   ✓ Aggregated to 704 district-year records
+[2026-04-24T20:59:09.740+0000] {data_merge_dag.py:129} INFO -   Features: 14 weather features
+[2026-04-24T20:59:09.741+0000] {data_merge_dag.py:132} INFO - 
+[4/6] Merging Weather and Yield Data...
+[2026-04-24T20:59:09.744+0000] {data_merge_dag.py:303} ERROR - 
+================================================================================
+[2026-04-24T20:59:09.745+0000] {data_merge_dag.py:304} ERROR - ✗ ERROR IN DATA MERGE PIPELINE
+[2026-04-24T20:59:09.745+0000] {data_merge_dag.py:305} ERROR - ================================================================================
+[2026-04-24T20:59:09.746+0000] {data_merge_dag.py:306} ERROR - Exception: invalid literal for int() with base 10: '2001-02'
+[2026-04-24T20:59:09.746+0000] {data_merge_dag.py:307} ERROR - 
+Full Traceback:
+[2026-04-24T20:59:09.756+0000] {data_merge_dag.py:308} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/data_merge_dag.py", line 140, in merge_and_process_data
+    df_yield_target['year'] = df_yield_target['year'].astype(int)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/generic.py", line 6324, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 451, in astype
+    return self.apply(
+           ^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 352, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 511, in astype
+    new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 242, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 187, in astype_array
+    values = _astype_nansafe(values, dtype, copy=copy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 138, in _astype_nansafe
+    return arr.astype(dtype, copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '2001-02'
+
+[2026-04-24T20:59:09.757+0000] {data_merge_dag.py:309} ERROR - ================================================================================
+
+[2026-04-24T20:59:09.758+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/data_merge_dag.py", line 140, in merge_and_process_data
+    df_yield_target['year'] = df_yield_target['year'].astype(int)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/generic.py", line 6324, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 451, in astype
+    return self.apply(
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 352, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 511, in astype
+    new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 242, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 187, in astype_array
+    values = _astype_nansafe(values, dtype, copy=copy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/dtypes/astype.py", line 138, in _astype_nansafe
+    return arr.astype(dtype, copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '2001-02'
+[2026-04-24T20:59:09.770+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=data_merge_pipeline, task_id=merge_and_process_data, execution_date=20260424T205403, start_date=20260424T205908, end_date=20260424T205909
+[2026-04-24T20:59:09.791+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 20 for task merge_and_process_data (invalid literal for int() with base 10: '2001-02'; 305)
+[2026-04-24T20:59:09.822+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-24T20:59:09.855+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

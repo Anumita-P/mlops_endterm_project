@@ -1,0 +1,65 @@
+[2026-04-25T03:54:53.039+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [queued]>
+[2026-04-25T03:54:53.048+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [queued]>
+[2026-04-25T03:54:53.049+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-25T03:54:53.064+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): engineer_features> on 2026-04-25 03:49:48.488929+00:00
+[2026-04-25T03:54:53.073+0000] {standard_task_runner.py:60} INFO - Started process 2262 to run task
+[2026-04-25T03:54:53.076+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'feature_engineering_pipeline', 'engineer_features', 'manual__2026-04-25T03:49:48.488929+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/feature_engineering_dag.py', '--cfg-path', '/tmp/tmp_o6mb6ed']
+[2026-04-25T03:54:53.079+0000] {standard_task_runner.py:88} INFO - Job 32: Subtask engineer_features
+[2026-04-25T03:54:53.097+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-25T03:54:53.140+0000] {task_command.py:423} INFO - Running <TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [running]> on host efe38e3d6854
+[2026-04-25T03:54:53.227+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='feature_engineering_pipeline' AIRFLOW_CTX_TASK_ID='engineer_features' AIRFLOW_CTX_EXECUTION_DATE='2026-04-25T03:49:48.488929+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-25T03:49:48.488929+00:00'
+[2026-04-25T03:54:53.229+0000] {feature_engineering_dag.py:34} INFO - 
+================================================================================
+[2026-04-25T03:54:53.230+0000] {feature_engineering_dag.py:35} INFO - FEATURE ENGINEERING PIPELINE - STARTED
+[2026-04-25T03:54:53.231+0000] {feature_engineering_dag.py:36} INFO - ================================================================================
+[2026-04-25T03:54:53.231+0000] {feature_engineering_dag.py:42} INFO - 
+[1/7] Loading Training Dataset...
+[2026-04-25T03:54:53.247+0000] {feature_engineering_dag.py:50} INFO -   ✓ Loaded 408 records
+[2026-04-25T03:54:53.248+0000] {feature_engineering_dag.py:51} INFO -   ✓ Original columns: 20
+[2026-04-25T03:54:53.249+0000] {feature_engineering_dag.py:58} INFO - 
+[2/7] Creating Yield Risk Labels...
+[2026-04-25T03:54:53.260+0000] {feature_engineering_dag.py:77} INFO -   ✓ Created binary risk label
+[2026-04-25T03:54:53.261+0000] {feature_engineering_dag.py:78} INFO -     - HIGH RISK (1): 72 (17.6%)
+[2026-04-25T03:54:53.261+0000] {feature_engineering_dag.py:79} INFO -     - LOW RISK (0): 336 (82.4%)
+[2026-04-25T03:54:53.262+0000] {feature_engineering_dag.py:84} INFO - 
+[3/7] Creating Lagged Features...
+[2026-04-25T03:54:53.270+0000] {feature_engineering_dag.py:94} INFO -   ✓ Created 3 lagged features
+[2026-04-25T03:54:53.271+0000] {feature_engineering_dag.py:99} INFO - 
+[4/7] Creating Interaction Features...
+[2026-04-25T03:54:53.273+0000] {feature_engineering_dag.py:116} INFO -   ✓ Created 5 interaction features
+[2026-04-25T03:54:53.274+0000] {feature_engineering_dag.py:121} INFO - 
+[5/7] Cleaning Data (Inf & NaN)...
+[2026-04-25T03:54:53.289+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T03:54:53.291+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T03:54:53.293+0000] {feature_engineering_dag.py:158} INFO -   ✓ Missing values: 900 → 816
+[2026-04-25T03:54:53.293+0000] {feature_engineering_dag.py:163} INFO - 
+[6/7] Scaling Numerical Features...
+[2026-04-25T03:54:53.299+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1217 RuntimeWarning: All-NaN slice encountered
+[2026-04-25T03:54:53.303+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1556 RuntimeWarning: All-NaN slice encountered
+[2026-04-25T03:54:53.308+0000] {feature_engineering_dag.py:191} INFO -   ✓ Scaled 27 features
+[2026-04-25T03:54:53.309+0000] {feature_engineering_dag.py:192} INFO -   ✓ Added 24 scaled columns
+[2026-04-25T03:54:53.309+0000] {feature_engineering_dag.py:197} INFO - 
+[7/7] Saving Features Dataset...
+[2026-04-25T03:54:53.354+0000] {feature_engineering_dag.py:204} INFO -   ✓ Saved: /home/***/data/processed/features_dataset.csv
+[2026-04-25T03:54:53.355+0000] {feature_engineering_dag.py:205} INFO -   ✓ Records: 408
+[2026-04-25T03:54:53.355+0000] {feature_engineering_dag.py:206} INFO -   ✓ Features: 57 (new: 37)
+[2026-04-25T03:54:53.355+0000] {feature_engineering_dag.py:207} INFO -   ✓ File size: 0.32 MB
+[2026-04-25T03:54:53.358+0000] {feature_engineering_dag.py:238} INFO -   ✓ Report saved
+[2026-04-25T03:54:53.358+0000] {feature_engineering_dag.py:243} INFO - 
+================================================================================
+[2026-04-25T03:54:53.358+0000] {feature_engineering_dag.py:244} INFO - ✓ FEATURE ENGINEERING PIPELINE COMPLETED SUCCESSFULLY
+[2026-04-25T03:54:53.358+0000] {feature_engineering_dag.py:245} INFO - ================================================================================
+[2026-04-25T03:54:53.359+0000] {feature_engineering_dag.py:246} INFO - 
+📊 SUMMARY:
+[2026-04-25T03:54:53.359+0000] {feature_engineering_dag.py:247} INFO -   Records: 408
+[2026-04-25T03:54:53.359+0000] {feature_engineering_dag.py:248} INFO -   Features: 57
+[2026-04-25T03:54:53.359+0000] {feature_engineering_dag.py:249} INFO -   New Features: 37
+[2026-04-25T03:54:53.360+0000] {feature_engineering_dag.py:250} INFO -   Target (yield_risk_label):
+[2026-04-25T03:54:53.360+0000] {feature_engineering_dag.py:251} INFO -     - HIGH RISK: 72 (17.6%)
+[2026-04-25T03:54:53.360+0000] {feature_engineering_dag.py:252} INFO -     - LOW RISK: 336 (82.4%)
+[2026-04-25T03:54:53.360+0000] {feature_engineering_dag.py:253} INFO - ================================================================================
+
+[2026-04-25T03:54:53.361+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'success', 'records': 408, 'features': 57, 'high_risk_count': 72}
+[2026-04-25T03:54:53.386+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=feature_engineering_pipeline, task_id=engineer_features, execution_date=20260425T034948, start_date=20260425T035453, end_date=20260425T035453
+[2026-04-25T03:54:53.411+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-25T03:54:53.431+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

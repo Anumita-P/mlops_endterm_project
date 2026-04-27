@@ -1,0 +1,60 @@
+{
+  "model": "yield_risk_classifier",
+  "train_records": 387,
+  "test_records": 21,
+  "train_accuracy": 1.0,
+  "test_accuracy": 0.8095238095238095,
+  "test_precision": 1.0,
+  "test_recall": 0.7777777777777778,
+  "test_f1_score": 0.8750000000000001,
+  "test_roc_auc": 0.9444444444444445,
+  "confusion_matrix": {
+    "true_negatives": 3,
+    "false_positives": 0,
+    "false_negatives": 4,
+    "true_positives": 14
+  },
+  "top_10_features": [
+    {
+      "feature": "lag1_yield_kg_per_ha",
+      "importance": 0.16376843034220512
+    },
+    {
+      "feature": "lag1_yield_kg_per_ha_scaled",
+      "importance": 0.12032677605657324
+    },
+    {
+      "feature": "yield_change_pct_scaled",
+      "importance": 0.09797458432510261
+    },
+    {
+      "feature": "yield_change_pct",
+      "importance": 0.08513655662810159
+    },
+    {
+      "feature": "lag2_yield_kg_per_ha_scaled",
+      "importance": 0.03858663310702377
+    },
+    {
+      "feature": "lag2_yield_kg_per_ha",
+      "importance": 0.028477943804789227
+    },
+    {
+      "feature": "temp_mean_c_max",
+      "importance": 0.02272467592216451
+    },
+    {
+      "feature": "temp_mean_c_max_scaled",
+      "importance": 0.021591150634923627
+    },
+    {
+      "feature": "temp_range",
+      "importance": 0.021281514488085768
+    },
+    {
+      "feature": "temp_max_c_mean",
+      "importance": 0.019533916445611595
+    }
+  ],
+  "timestamp": "2026-04-26T18:59:58.873532"
+}

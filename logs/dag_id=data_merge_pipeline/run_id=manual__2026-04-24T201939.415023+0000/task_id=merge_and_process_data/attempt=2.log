@@ -1,0 +1,55 @@
+[2026-04-24T20:48:08.912+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:19:39.415023+00:00 [queued]>
+[2026-04-24T20:48:08.945+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:19:39.415023+00:00 [queued]>
+[2026-04-24T20:48:08.952+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-24T20:48:09.027+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): merge_and_process_data> on 2026-04-24 20:19:39.415023+00:00
+[2026-04-24T20:48:09.113+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data_merge_pipeline', 'merge_and_process_data', 'manual__2026-04-24T20:19:39.415023+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/data_merge_dag.py', '--cfg-path', '/tmp/tmp72cdnd62']
+[2026-04-24T20:48:09.105+0000] {standard_task_runner.py:60} INFO - Started process 146 to run task
+[2026-04-24T20:48:09.162+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask merge_and_process_data
+[2026-04-24T20:48:09.374+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-24T20:48:09.498+0000] {task_command.py:423} INFO - Running <TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:19:39.415023+00:00 [running]> on host efe38e3d6854
+[2026-04-24T20:48:09.767+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='data_merge_pipeline' AIRFLOW_CTX_TASK_ID='merge_and_process_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-24T20:19:39.415023+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-24T20:19:39.415023+00:00'
+[2026-04-24T20:48:09.775+0000] {data_merge_dag.py:57} INFO - 
+================================================================================
+[2026-04-24T20:48:09.776+0000] {data_merge_dag.py:58} INFO - MLOPS DATA MERGE PIPELINE - STARTED
+[2026-04-24T20:48:09.778+0000] {data_merge_dag.py:59} INFO - ================================================================================
+[2026-04-24T20:48:09.779+0000] {data_merge_dag.py:65} INFO - 
+[1/6] Loading Weather Data (NASA POWER)...
+[2026-04-24T20:48:11.075+0000] {data_merge_dag.py:72} INFO -   ✓ Loaded 257,152 daily weather records
+[2026-04-24T20:48:11.076+0000] {data_merge_dag.py:73} INFO -   Columns: ['district', 'latitude', 'longitude', 'date', 'year', 'month', 'T2M', 'T2M_MAX', 'T2M_MIN', 'PRECTOTCORR', 'RH2M', 'WS10M']
+[2026-04-24T20:48:11.142+0000] {data_merge_dag.py:74} INFO -   Date range: 2000-01-01 to 2021-12-31
+[2026-04-24T20:48:11.185+0000] {data_merge_dag.py:75} INFO -   Unique districts: 32
+[2026-04-24T20:48:11.355+0000] {data_merge_dag.py:91} INFO -   ✓ Weather data validated and standardized
+[2026-04-24T20:48:11.358+0000] {data_merge_dag.py:96} INFO - 
+[2/6] Loading Crop Yield Data...
+[2026-04-24T20:48:11.362+0000] {data_merge_dag.py:326} ERROR - 
+================================================================================
+[2026-04-24T20:48:11.363+0000] {data_merge_dag.py:327} ERROR - ✗ ERROR IN DATA MERGE PIPELINE
+[2026-04-24T20:48:11.364+0000] {data_merge_dag.py:328} ERROR - ================================================================================
+[2026-04-24T20:48:11.364+0000] {data_merge_dag.py:329} ERROR - Exception: Yield file not found: /home/***/data/raw/crop_yield/India_Agriculture_Crop_Production.csv
+[2026-04-24T20:48:11.365+0000] {data_merge_dag.py:330} ERROR - 
+Full Traceback:
+[2026-04-24T20:48:11.373+0000] {data_merge_dag.py:331} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/data_merge_dag.py", line 100, in merge_and_process_data
+    raise FileNotFoundError(f"Yield file not found: {yield_file}")
+FileNotFoundError: Yield file not found: /home/***/data/raw/crop_yield/India_Agriculture_Crop_Production.csv
+
+[2026-04-24T20:48:11.374+0000] {data_merge_dag.py:332} ERROR - ================================================================================
+
+[2026-04-24T20:48:11.375+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/data_merge_dag.py", line 100, in merge_and_process_data
+    raise FileNotFoundError(f"Yield file not found: {yield_file}")
+FileNotFoundError: Yield file not found: /home/***/data/raw/crop_yield/India_Agriculture_Crop_Production.csv
+[2026-04-24T20:48:11.400+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=data_merge_pipeline, task_id=merge_and_process_data, execution_date=20260424T201939, start_date=20260424T204808, end_date=20260424T204811
+[2026-04-24T20:48:11.423+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 16 for task merge_and_process_data (Yield file not found: /home/***/data/raw/crop_yield/India_Agriculture_Crop_Production.csv; 146)
+[2026-04-24T20:48:11.485+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-24T20:48:11.532+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

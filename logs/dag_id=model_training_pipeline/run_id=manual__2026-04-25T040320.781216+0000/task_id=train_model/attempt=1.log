@@ -1,0 +1,104 @@
+[2026-04-25T04:03:23.067+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: model_training_pipeline.train_model manual__2026-04-25T04:03:20.781216+00:00 [queued]>
+[2026-04-25T04:03:23.075+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: model_training_pipeline.train_model manual__2026-04-25T04:03:20.781216+00:00 [queued]>
+[2026-04-25T04:03:23.075+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-25T04:03:23.090+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): train_model> on 2026-04-25 04:03:20.781216+00:00
+[2026-04-25T04:03:23.100+0000] {standard_task_runner.py:60} INFO - Started process 404 to run task
+[2026-04-25T04:03:23.118+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'model_training_pipeline', 'train_model', 'manual__2026-04-25T04:03:20.781216+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/model_training_dag.py', '--cfg-path', '/tmp/tmp5osvy8yj']
+[2026-04-25T04:03:23.127+0000] {standard_task_runner.py:88} INFO - Job 35: Subtask train_model
+[2026-04-25T04:03:23.225+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-25T04:03:23.367+0000] {task_command.py:423} INFO - Running <TaskInstance: model_training_pipeline.train_model manual__2026-04-25T04:03:20.781216+00:00 [running]> on host efe38e3d6854
+[2026-04-25T04:03:23.596+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_scientist' AIRFLOW_CTX_DAG_ID='model_training_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2026-04-25T04:03:20.781216+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-25T04:03:20.781216+00:00'
+[2026-04-25T04:03:23.599+0000] {model_training_dag.py:37} INFO - 
+================================================================================
+[2026-04-25T04:03:23.600+0000] {model_training_dag.py:38} INFO - MODEL TRAINING PIPELINE - STARTED
+[2026-04-25T04:03:23.601+0000] {model_training_dag.py:39} INFO - ================================================================================
+[2026-04-25T04:03:23.601+0000] {model_training_dag.py:43} INFO - 
+[1/6] Loading Features Dataset...
+[2026-04-25T04:03:23.662+0000] {model_training_dag.py:51} INFO -   ✓ Loaded 408 records
+[2026-04-25T04:03:23.663+0000] {model_training_dag.py:52} INFO -   ✓ Features: 57
+[2026-04-25T04:03:23.663+0000] {model_training_dag.py:55} INFO - 
+[2/6] Preparing Train/Test Split...
+[2026-04-25T04:03:23.667+0000] {model_training_dag.py:70} INFO -   ✓ Train: 387 records (2000-2018)
+[2026-04-25T04:03:23.668+0000] {model_training_dag.py:71} INFO -   ✓ Test: 21 records (2019-2019)
+[2026-04-25T04:03:23.669+0000] {model_training_dag.py:74} INFO - 
+[3/6] Feature Selection...
+[2026-04-25T04:03:23.670+0000] {model_training_dag.py:88} INFO -   ✓ Selected 46 features
+[2026-04-25T04:03:23.682+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.684+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.707+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.708+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.711+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.712+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215 RuntimeWarning: Mean of empty slice
+[2026-04-25T04:03:23.713+0000] {model_training_dag.py:98} INFO -   ✓ Cleaned NaN/inf values
+[2026-04-25T04:03:23.714+0000] {model_training_dag.py:101} INFO - 
+[4/6] Training Random Forest...
+[2026-04-25T04:03:23.765+0000] {model_training_dag.py:258} ERROR - 
+================================================================================
+[2026-04-25T04:03:23.766+0000] {model_training_dag.py:259} ERROR - ✗ ERROR IN MODEL TRAINING
+[2026-04-25T04:03:23.766+0000] {model_training_dag.py:260} ERROR - ================================================================================
+[2026-04-25T04:03:23.767+0000] {model_training_dag.py:261} ERROR - Exception: Input X contains NaN.
+RandomForestClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+[2026-04-25T04:03:23.795+0000] {model_training_dag.py:262} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/model_training_dag.py", line 119, in train_model
+    rf_model.fit(X_train, y_train)
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/ensemble/_forest.py", line 348, in fit
+    X, y = self._validate_data(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 621, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1147, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 959, in check_array
+    _assert_all_finite(
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+RandomForestClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+[2026-04-25T04:03:23.795+0000] {model_training_dag.py:263} ERROR - ================================================================================
+
+[2026-04-25T04:03:23.797+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/model_training_dag.py", line 119, in train_model
+    rf_model.fit(X_train, y_train)
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/ensemble/_forest.py", line 348, in fit
+    X, y = self._validate_data(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 621, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1147, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 959, in check_array
+    _assert_all_finite(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+RandomForestClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+[2026-04-25T04:03:23.822+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=model_training_pipeline, task_id=train_model, execution_date=20260425T040320, start_date=20260425T040323, end_date=20260425T040323
+[2026-04-25T04:03:23.839+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 35 for task train_model (Input X contains NaN.
+RandomForestClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values; 404)
+[2026-04-25T04:03:23.858+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-25T04:03:23.879+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  airflow-webserver:
+    build: .
+    image: airflow-mlops:latest
+    ports:
+      - "8081:8080"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
+      AIRFLOW__CORE__BASE_LOG_FOLDER: /home/airflow/logs
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW_HOME: /home/airflow
+      PYTHONUNBUFFERED: 1
+      GUNICORN_CMD_ARGS: "--workers=4 --worker-class=sync --timeout=3600"
+    volumes:
+      - ./src/airflow/dags:/home/airflow/dags
+      - ./data:/home/airflow/data
+      - ./logs:/home/airflow/logs
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true &&
+      airflow webserver
+      "
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    build: .
+    image: airflow-mlops:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /home/airflow/dags
+      AIRFLOW__CORE__BASE_LOG_FOLDER: /home/airflow/logs
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW_HOME: /home/airflow
+      PYTHONUNBUFFERED: 1
+      AIRFLOW__CORE__PARALLELISM: 4
+      AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: 4
+      AIRFLOW__CORE__TASK_LOG_READER: task
+      GUNICORN_CMD_ARGS: --workers=4 --worker-class=sync --timeout=3600 --keepalive=60
+    volumes:
+      - ./src/airflow/dags:/home/airflow/dags
+      - ./data:/home/airflow/data
+      - ./logs:/home/airflow/logs
+    command: airflow scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

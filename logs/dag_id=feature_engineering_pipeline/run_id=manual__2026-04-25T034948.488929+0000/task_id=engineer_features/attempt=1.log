@@ -1,0 +1,116 @@
+[2026-04-25T03:49:50.911+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [queued]>
+[2026-04-25T03:49:50.919+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [queued]>
+[2026-04-25T03:49:50.920+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-25T03:49:50.936+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): engineer_features> on 2026-04-25 03:49:48.488929+00:00
+[2026-04-25T03:49:50.949+0000] {standard_task_runner.py:60} INFO - Started process 2048 to run task
+[2026-04-25T03:49:50.952+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'feature_engineering_pipeline', 'engineer_features', 'manual__2026-04-25T03:49:48.488929+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/feature_engineering_dag.py', '--cfg-path', '/tmp/tmpp45bgklv']
+[2026-04-25T03:49:50.954+0000] {standard_task_runner.py:88} INFO - Job 29: Subtask engineer_features
+[2026-04-25T03:49:50.973+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-25T03:49:51.018+0000] {task_command.py:423} INFO - Running <TaskInstance: feature_engineering_pipeline.engineer_features manual__2026-04-25T03:49:48.488929+00:00 [running]> on host efe38e3d6854
+[2026-04-25T03:49:51.102+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='feature_engineering_pipeline' AIRFLOW_CTX_TASK_ID='engineer_features' AIRFLOW_CTX_EXECUTION_DATE='2026-04-25T03:49:48.488929+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-25T03:49:48.488929+00:00'
+[2026-04-25T03:49:51.105+0000] {feature_engineering_dag.py:33} INFO - 
+================================================================================
+[2026-04-25T03:49:51.106+0000] {feature_engineering_dag.py:34} INFO - FEATURE ENGINEERING PIPELINE - STARTED
+[2026-04-25T03:49:51.106+0000] {feature_engineering_dag.py:35} INFO - ================================================================================
+[2026-04-25T03:49:51.107+0000] {feature_engineering_dag.py:41} INFO - 
+[1/8] Loading Training Dataset...
+[2026-04-25T03:49:51.121+0000] {feature_engineering_dag.py:49} INFO -   ✓ Loaded 408 records
+[2026-04-25T03:49:51.122+0000] {feature_engineering_dag.py:50} INFO -   ✓ Original columns: 20
+[2026-04-25T03:49:51.122+0000] {feature_engineering_dag.py:51} INFO -   ✓ Columns: ['district', 'year', 'temp_mean_c_mean', 'temp_mean_c_min', 'temp_mean_c_max', 'temp_max_c_mean', 'temp_max_c_max', 'temp_min_c_mean', 'temp_min_c_min', 'rainfall_mm_sum', 'rainfall_mm_mean', 'humidity_percent_mean', 'humidity_percent_min', 'humidity_percent_max', 'wind_speed_ms_mean', 'wind_speed_ms_max', 'crop', 'yield_kg_per_ha', 'msp_per_quintal', 'water_requirement_mm']
+[2026-04-25T03:49:51.123+0000] {feature_engineering_dag.py:58} INFO - 
+[2/8] Creating Yield Risk Labels...
+[2026-04-25T03:49:51.162+0000] {feature_engineering_dag.py:79} INFO -   ✓ Created binary risk label
+[2026-04-25T03:49:51.163+0000] {feature_engineering_dag.py:80} INFO -     - HIGH RISK (1): 72 records (17.6%)
+[2026-04-25T03:49:51.163+0000] {feature_engineering_dag.py:81} INFO -     - LOW RISK (0): 336 records (82.4%)
+[2026-04-25T03:49:51.164+0000] {feature_engineering_dag.py:86} INFO - 
+[3/8] Creating Lagged Features...
+[2026-04-25T03:49:51.178+0000] {feature_engineering_dag.py:98} INFO -   ✓ Created 3 lagged features:
+[2026-04-25T03:49:51.179+0000] {feature_engineering_dag.py:99} INFO -     - lag1_yield_kg_per_ha
+[2026-04-25T03:49:51.179+0000] {feature_engineering_dag.py:100} INFO -     - lag2_yield_kg_per_ha
+[2026-04-25T03:49:51.180+0000] {feature_engineering_dag.py:101} INFO -     - yield_change_pct
+[2026-04-25T03:49:51.180+0000] {feature_engineering_dag.py:106} INFO - 
+[4/8] Creating Interaction Features...
+[2026-04-25T03:49:51.182+0000] {feature_engineering_dag.py:123} INFO -   ✓ Created 5 interaction features:
+[2026-04-25T03:49:51.183+0000] {feature_engineering_dag.py:124} INFO -     - rainfall_to_water_ratio
+[2026-04-25T03:49:51.183+0000] {feature_engineering_dag.py:125} INFO -     - temp_range
+[2026-04-25T03:49:51.184+0000] {feature_engineering_dag.py:126} INFO -     - rainfall_adequacy
+[2026-04-25T03:49:51.184+0000] {feature_engineering_dag.py:127} INFO -     - heat_stress_index
+[2026-04-25T03:49:51.184+0000] {feature_engineering_dag.py:128} INFO -     - yield_to_msp_ratio
+[2026-04-25T03:49:51.184+0000] {feature_engineering_dag.py:133} INFO - 
+[5/8] Scaling Numerical Features...
+[2026-04-25T03:49:51.197+0000] {feature_engineering_dag.py:312} ERROR - 
+================================================================================
+[2026-04-25T03:49:51.198+0000] {feature_engineering_dag.py:313} ERROR - ✗ ERROR IN FEATURE ENGINEERING PIPELINE
+[2026-04-25T03:49:51.198+0000] {feature_engineering_dag.py:314} ERROR - ================================================================================
+[2026-04-25T03:49:51.199+0000] {feature_engineering_dag.py:315} ERROR - Exception: Input X contains infinity or a value too large for dtype('float64').
+[2026-04-25T03:49:51.199+0000] {feature_engineering_dag.py:316} ERROR - 
+Full Traceback:
+[2026-04-25T03:49:51.222+0000] {feature_engineering_dag.py:317} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/feature_engineering_dag.py", line 159, in engineer_features
+    df_scaled_values = scaler.fit_transform(df_for_scaling)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 915, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1533, in fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/base.py", line 604, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 959, in check_array
+    _assert_all_finite(
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/***/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains infinity or a value too large for dtype('float64').
+
+[2026-04-25T03:49:51.223+0000] {feature_engineering_dag.py:318} ERROR - ================================================================================
+
+[2026-04-25T03:49:51.224+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/feature_engineering_dag.py", line 159, in engineer_features
+    df_scaled_values = scaler.fit_transform(df_for_scaling)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 915, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1533, in fit
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/base.py", line 604, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 959, in check_array
+    _assert_all_finite(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains infinity or a value too large for dtype('float64').
+[2026-04-25T03:49:51.236+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=feature_engineering_pipeline, task_id=engineer_features, execution_date=20260425T034948, start_date=20260425T034950, end_date=20260425T034951
+[2026-04-25T03:49:51.250+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 29 for task engineer_features (Input X contains infinity or a value too large for dtype('float64').; 2048)
+[2026-04-25T03:49:51.287+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-25T03:49:51.315+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

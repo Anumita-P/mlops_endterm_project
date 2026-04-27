@@ -1,0 +1,101 @@
+[2026-04-27T00:28:42.753+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mlflow_model_tracking.log_model_to_mlflow manual__2026-04-27T00:22:36.471644+00:00 [queued]>
+[2026-04-27T00:28:42.762+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mlflow_model_tracking.log_model_to_mlflow manual__2026-04-27T00:22:36.471644+00:00 [queued]>
+[2026-04-27T00:28:42.763+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-27T00:28:42.777+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): log_model_to_mlflow> on 2026-04-27 00:22:36.471644+00:00
+[2026-04-27T00:28:42.784+0000] {standard_task_runner.py:60} INFO - Started process 516 to run task
+[2026-04-27T00:28:42.787+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mlflow_model_tracking', 'log_model_to_mlflow', 'manual__2026-04-27T00:22:36.471644+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/mlflow_tracking_dag.py', '--cfg-path', '/tmp/tmp17gga9kw']
+[2026-04-27T00:28:42.790+0000] {standard_task_runner.py:88} INFO - Job 53: Subtask log_model_to_mlflow
+[2026-04-27T00:28:42.808+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-27T00:28:42.843+0000] {task_command.py:423} INFO - Running <TaskInstance: mlflow_model_tracking.log_model_to_mlflow manual__2026-04-27T00:22:36.471644+00:00 [running]> on host efe38e3d6854
+[2026-04-27T00:28:42.916+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_scientist' AIRFLOW_CTX_DAG_ID='mlflow_model_tracking' AIRFLOW_CTX_TASK_ID='log_model_to_mlflow' AIRFLOW_CTX_EXECUTION_DATE='2026-04-27T00:22:36.471644+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-27T00:22:36.471644+00:00'
+[2026-04-27T00:28:42.918+0000] {mlflow_tracking_dag.py:27} INFO - 
+================================================================================
+[2026-04-27T00:28:42.919+0000] {mlflow_tracking_dag.py:28} INFO - MLFLOW MODEL TRACKING
+[2026-04-27T00:28:42.920+0000] {mlflow_tracking_dag.py:29} INFO - ================================================================================
+[2026-04-27T00:28:42.979+0000] {mlflow_tracking_dag.py:36} INFO - 
+[1/3] Loading Model & Metrics...
+[2026-04-27T00:28:43.435+0000] {mlflow_tracking_dag.py:41} INFO -   ✓ Loaded model
+[2026-04-27T00:28:43.438+0000] {mlflow_tracking_dag.py:47} INFO -   ✓ Loaded metrics
+[2026-04-27T00:28:43.443+0000] {mlflow_tracking_dag.py:53} INFO -   ✓ Loaded config
+[2026-04-27T00:28:43.443+0000] {mlflow_tracking_dag.py:56} INFO - 
+[2/3] Logging to MLflow...
+[2026-04-27T00:28:43.488+0000] {logging_mixin.py:188} WARNING - 2026/04/27 00:28:43 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2026-04-27T00:28:44.006+0000] {mlflow_tracking_dag.py:117} ERROR - 
+================================================================================
+[2026-04-27T00:28:44.007+0000] {mlflow_tracking_dag.py:118} ERROR - ✗ ERROR
+[2026-04-27T00:28:44.008+0000] {mlflow_tracking_dag.py:119} ERROR - ================================================================================
+[2026-04-27T00:28:44.008+0000] {mlflow_tracking_dag.py:120} ERROR - [Errno 13] Permission denied: '/C:'
+[2026-04-27T00:28:44.017+0000] {mlflow_tracking_dag.py:122} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/mlflow_tracking_dag.py", line 86, in log_model_to_mlflow
+    mlflow.log_artifact(str(metrics_file))
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/tracking/fluent.py", line 1068, in log_artifact
+    MlflowClient().log_artifact(run_id, local_path, artifact_path)
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/tracking/client.py", line 1878, in log_artifact
+    self._tracking_client.log_artifact(run_id, local_path, artifact_path)
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/tracking/_tracking_service/client.py", line 815, in log_artifact
+    artifact_repo.log_artifact(local_path, artifact_path)
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 43, in log_artifact
+    mkdir(artifact_dir)
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/utils/file_utils.py", line 211, in mkdir
+    raise e
+  File "/home/***/.local/lib/python3.11/site-packages/mlflow/utils/file_utils.py", line 208, in mkdir
+    os.makedirs(target, exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  [Previous line repeated 5 more times]
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/C:'
+
+[2026-04-27T00:28:44.018+0000] {mlflow_tracking_dag.py:123} ERROR - ================================================================================
+
+[2026-04-27T00:28:44.019+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/mlflow_tracking_dag.py", line 86, in log_model_to_mlflow
+    mlflow.log_artifact(str(metrics_file))
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/tracking/fluent.py", line 1068, in log_artifact
+    MlflowClient().log_artifact(run_id, local_path, artifact_path)
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/tracking/client.py", line 1878, in log_artifact
+    self._tracking_client.log_artifact(run_id, local_path, artifact_path)
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/tracking/_tracking_service/client.py", line 815, in log_artifact
+    artifact_repo.log_artifact(local_path, artifact_path)
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 43, in log_artifact
+    mkdir(artifact_dir)
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/utils/file_utils.py", line 211, in mkdir
+    raise e
+  File "/home/airflow/.local/lib/python3.11/site-packages/mlflow/utils/file_utils.py", line 208, in mkdir
+    os.makedirs(target, exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  [Previous line repeated 5 more times]
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/C:'
+[2026-04-27T00:28:44.029+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=mlflow_model_tracking, task_id=log_model_to_mlflow, execution_date=20260427T002236, start_date=20260427T002842, end_date=20260427T002844
+[2026-04-27T00:28:44.073+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 53 for task log_model_to_mlflow ([Errno 13] Permission denied: '/C:'; 516)
+[2026-04-27T00:28:44.124+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-27T00:28:44.143+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

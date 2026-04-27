@@ -1,0 +1,73 @@
+[2026-04-22T19:25:48.780+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_validate_data manual__2026-04-22T19:20:44.109516+00:00 [queued]>
+[2026-04-22T19:25:48.787+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_validate_data manual__2026-04-22T19:20:44.109516+00:00 [queued]>
+[2026-04-22T19:25:48.788+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-22T19:25:48.802+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): merge_and_validate_data> on 2026-04-22 19:20:44.109516+00:00
+[2026-04-22T19:25:48.807+0000] {standard_task_runner.py:60} INFO - Started process 421 to run task
+[2026-04-22T19:25:48.809+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data_merge_pipeline', 'merge_and_validate_data', 'manual__2026-04-22T19:20:44.109516+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/data_merge_dag.py', '--cfg-path', '/tmp/tmpy9ztoo28']
+[2026-04-22T19:25:48.812+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask merge_and_validate_data
+[2026-04-22T19:25:48.826+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-22T19:25:48.858+0000] {task_command.py:423} INFO - Running <TaskInstance: data_merge_pipeline.merge_and_validate_data manual__2026-04-22T19:20:44.109516+00:00 [running]> on host 6ceeb7a486e2
+[2026-04-22T19:25:48.921+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='data_merge_pipeline' AIRFLOW_CTX_TASK_ID='merge_and_validate_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-22T19:20:44.109516+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-22T19:20:44.109516+00:00'
+[2026-04-22T19:25:48.923+0000] {data_merge_dag.py:56} INFO - ======================================================================
+[2026-04-22T19:25:48.923+0000] {data_merge_dag.py:57} INFO - DATA MERGE PIPELINE
+[2026-04-22T19:25:48.924+0000] {data_merge_dag.py:58} INFO - ======================================================================
+[2026-04-22T19:25:48.924+0000] {data_merge_dag.py:62} INFO - 
+✓ STEP 1: Load Weather Data
+[2026-04-22T19:25:49.275+0000] {data_merge_dag.py:69} INFO -   Loaded 257152 weather records
+[2026-04-22T19:25:49.275+0000] {data_merge_dag.py:70} INFO -   Columns: ['district', 'latitude', 'longitude', 'date', 'year', 'month', 'T2M', 'T2M_MAX', 'T2M_MIN', 'PRECTOTCORR', 'RH2M', 'WS10M']
+[2026-04-22T19:25:49.309+0000] {data_merge_dag.py:76} INFO -   ✓ Weather data validated
+[2026-04-22T19:25:49.310+0000] {data_merge_dag.py:79} INFO - 
+✓ STEP 2: Load Crop Yield Data
+[2026-04-22T19:25:49.862+0000] {data_merge_dag.py:86} INFO -   Loaded 345407 total crop records
+[2026-04-22T19:25:49.880+0000] {data_merge_dag.py:92} INFO -   Filtered to 1464 TN rice/sugarcane records
+[2026-04-22T19:25:49.883+0000] {data_merge_dag.py:104} INFO -   ✓ Yield data validated (1464 records)
+[2026-04-22T19:25:49.883+0000] {data_merge_dag.py:107} INFO - 
+✓ STEP 3: Aggregate Weather to Monthly Features
+[2026-04-22T19:25:49.894+0000] {data_merge_dag.py:237} ERROR - 
+✗ ERROR: "Column(s) ['humidity_percent', 'rainfall_mm', 'temp_max_c', 'temp_mean_c', 'temp_min_c', 'wind_speed_ms'] do not exist"
+Traceback (most recent call last):
+  File "/home/airflow/dags/data_merge_dag.py", line 111, in merge_all_data
+    agg_weather = df_weather.groupby(['district', 'year_month']).agg({
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/groupby/generic.py", line 1269, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 163, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 403, in agg_dict_like
+    arg = self.normalize_dictlike_arg("agg", selected_obj, arg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 535, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {cols_sorted} do not exist")
+KeyError: "Column(s) ['humidity_percent', 'rainfall_mm', 'temp_max_c', 'temp_mean_c', 'temp_min_c', 'wind_speed_ms'] do not exist"
+[2026-04-22T19:25:49.901+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/data_merge_dag.py", line 111, in merge_all_data
+    agg_weather = df_weather.groupby(['district', 'year_month']).agg({
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/groupby/generic.py", line 1269, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 163, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 403, in agg_dict_like
+    arg = self.normalize_dictlike_arg("agg", selected_obj, arg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pandas/core/apply.py", line 535, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {cols_sorted} do not exist")
+KeyError: "Column(s) ['humidity_percent', 'rainfall_mm', 'temp_max_c', 'temp_mean_c', 'temp_min_c', 'wind_speed_ms'] do not exist"
+[2026-04-22T19:25:49.910+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=data_merge_pipeline, task_id=merge_and_validate_data, execution_date=20260422T192044, start_date=20260422T192548, end_date=20260422T192549
+[2026-04-22T19:25:49.920+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task merge_and_validate_data ("Column(s) ['humidity_percent', 'rainfall_mm', 'temp_max_c', 'temp_mean_c', 'temp_min_c', 'wind_speed_ms'] do not exist"; 421)
+[2026-04-22T19:25:49.949+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-22T19:25:49.967+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

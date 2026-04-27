@@ -1,0 +1,69 @@
+[2026-04-24T20:55:39.360+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:55:37.528062+00:00 [queued]>
+[2026-04-24T20:55:39.369+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:55:37.528062+00:00 [queued]>
+[2026-04-24T20:55:39.369+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-24T20:55:39.387+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): merge_and_process_data> on 2026-04-24 20:55:37.528062+00:00
+[2026-04-24T20:55:39.395+0000] {standard_task_runner.py:60} INFO - Started process 251 to run task
+[2026-04-24T20:55:39.397+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data_merge_pipeline', 'merge_and_process_data', 'manual__2026-04-24T20:55:37.528062+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/data_merge_dag.py', '--cfg-path', '/tmp/tmp7rd1erqu']
+[2026-04-24T20:55:39.400+0000] {standard_task_runner.py:88} INFO - Job 18: Subtask merge_and_process_data
+[2026-04-24T20:55:39.420+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-04-24T20:55:39.463+0000] {task_command.py:423} INFO - Running <TaskInstance: data_merge_pipeline.merge_and_process_data manual__2026-04-24T20:55:37.528062+00:00 [running]> on host efe38e3d6854
+[2026-04-24T20:55:39.555+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='data_merge_pipeline' AIRFLOW_CTX_TASK_ID='merge_and_process_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-24T20:55:37.528062+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-24T20:55:37.528062+00:00'
+[2026-04-24T20:55:39.557+0000] {data_merge_dag.py:57} INFO - 
+================================================================================
+[2026-04-24T20:55:39.557+0000] {data_merge_dag.py:58} INFO - MLOPS DATA MERGE PIPELINE - STARTED
+[2026-04-24T20:55:39.558+0000] {data_merge_dag.py:59} INFO - ================================================================================
+[2026-04-24T20:55:39.558+0000] {data_merge_dag.py:65} INFO - 
+[1/6] Loading Weather Data (NASA POWER)...
+[2026-04-24T20:55:40.128+0000] {data_merge_dag.py:72} INFO -   ✓ Loaded 257,152 daily weather records
+[2026-04-24T20:55:40.131+0000] {data_merge_dag.py:73} INFO -   Columns: ['district', 'latitude', 'longitude', 'date', 'year', 'month', 'T2M', 'T2M_MAX', 'T2M_MIN', 'PRECTOTCORR', 'RH2M', 'WS10M']
+[2026-04-24T20:55:40.161+0000] {data_merge_dag.py:74} INFO -   Date range: 2000-01-01 to 2021-12-31
+[2026-04-24T20:55:40.178+0000] {data_merge_dag.py:75} INFO -   Unique districts: 32
+[2026-04-24T20:55:40.257+0000] {data_merge_dag.py:91} INFO -   ✓ Weather data validated and standardized
+[2026-04-24T20:55:40.258+0000] {data_merge_dag.py:96} INFO - 
+[2/6] Loading Crop Yield Data...
+[2026-04-24T20:55:40.900+0000] {data_merge_dag.py:103} INFO -   ✓ Loaded 345,407 total crop records
+[2026-04-24T20:55:40.916+0000] {data_merge_dag.py:107} INFO -   Filtered to 18,525 Tamil Nadu records
+[2026-04-24T20:55:40.918+0000] {data_merge_dag.py:111} INFO -   Filtered to 1,464 Rice + Sugarcane records
+[2026-04-24T20:55:40.921+0000] {data_merge_dag.py:123} INFO -   ✓ Yield data validated (1,464 records)
+[2026-04-24T20:55:40.922+0000] {data_merge_dag.py:124} INFO -   Crops: ['Rice', 'Sugarcane']
+[2026-04-24T20:55:40.923+0000] {data_merge_dag.py:125} INFO -   Year range: 1998-99-2019-20
+[2026-04-24T20:55:40.923+0000] {data_merge_dag.py:130} INFO - 
+[3/6] Aggregating Daily Weather to Yearly Features...
+[2026-04-24T20:55:40.995+0000] {data_merge_dag.py:146} INFO -   ✓ Aggregated to 704 district-year records
+[2026-04-24T20:55:40.996+0000] {data_merge_dag.py:147} INFO -   Features: 15 weather features
+[2026-04-24T20:55:40.997+0000] {data_merge_dag.py:152} INFO - 
+[4/6] Merging Weather and Yield Data...
+[2026-04-24T20:55:41.001+0000] {data_merge_dag.py:330} ERROR - 
+================================================================================
+[2026-04-24T20:55:41.001+0000] {data_merge_dag.py:331} ERROR - ✗ ERROR IN DATA MERGE PIPELINE
+[2026-04-24T20:55:41.002+0000] {data_merge_dag.py:332} ERROR - ================================================================================
+[2026-04-24T20:55:41.003+0000] {data_merge_dag.py:333} ERROR - Exception: name 'df_yield_agg' is not defined
+[2026-04-24T20:55:41.003+0000] {data_merge_dag.py:334} ERROR - 
+Full Traceback:
+[2026-04-24T20:55:41.010+0000] {data_merge_dag.py:335} ERROR - Traceback (most recent call last):
+  File "/home/***/dags/data_merge_dag.py", line 161, in merge_and_process_data
+    df_yield_agg['year'] = df_yield_agg['year'].astype(int)
+                           ^^^^^^^^^^^^
+NameError: name 'df_yield_agg' is not defined
+
+[2026-04-24T20:55:41.011+0000] {data_merge_dag.py:336} ERROR - ================================================================================
+
+[2026-04-24T20:55:41.012+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dags/data_merge_dag.py", line 161, in merge_and_process_data
+    df_yield_agg['year'] = df_yield_agg['year'].astype(int)
+                           ^^^^^^^^^^^^
+NameError: name 'df_yield_agg' is not defined
+[2026-04-24T20:55:41.027+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=data_merge_pipeline, task_id=merge_and_process_data, execution_date=20260424T205537, start_date=20260424T205539, end_date=20260424T205541
+[2026-04-24T20:55:41.053+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 18 for task merge_and_process_data (name 'df_yield_agg' is not defined; 251)
+[2026-04-24T20:55:41.098+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-24T20:55:41.117+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

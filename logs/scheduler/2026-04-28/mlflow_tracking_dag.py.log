@@ -11408,3 +11408,94 @@
 [2026-04-28T18:16:09.346+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:09.345+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-04-28T18:16:09.356+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:09.356+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
 [2026-04-28T18:16:09.376+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.079 seconds
+[2026-04-28T18:16:39.487+0000] {processor.py:161} INFO - Started process (PID=29489) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:16:39.488+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:16:39.489+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:39.489+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:16:40.368+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:16:40.386+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:40.385+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:16:40.394+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:40.394+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:16:40.478+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 0.996 seconds
+[2026-04-28T18:17:11.203+0000] {processor.py:161} INFO - Started process (PID=29545) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:11.205+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:17:11.208+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:11.207+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:12.136+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:12.164+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:12.163+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:17:12.174+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:12.174+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:17:12.205+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.007 seconds
+[2026-04-28T18:17:42.650+0000] {processor.py:161} INFO - Started process (PID=29596) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:42.652+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:17:42.653+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:42.653+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:43.576+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:17:43.596+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:43.595+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:17:43.606+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:43.606+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:17:43.631+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 0.985 seconds
+[2026-04-28T18:18:13.785+0000] {processor.py:161} INFO - Started process (PID=29650) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:13.788+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:18:13.789+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:13.788+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:14.879+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:14.909+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:14.908+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:18:14.923+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:14.922+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:18:14.954+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.173 seconds
+[2026-04-28T18:18:45.880+0000] {processor.py:161} INFO - Started process (PID=29708) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:45.882+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:18:45.885+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:45.884+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:47.201+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:18:47.223+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:47.223+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:18:47.234+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:47.234+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:18:47.269+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.394 seconds
+[2026-04-28T18:19:18.066+0000] {processor.py:161} INFO - Started process (PID=29766) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:18.067+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:19:18.069+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:18.069+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:19.125+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:19.145+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:19.145+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:19:19.156+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:19.156+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:19:19.178+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.117 seconds
+[2026-04-28T18:19:49.482+0000] {processor.py:161} INFO - Started process (PID=29824) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:49.483+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:19:49.485+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:49.484+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:50.456+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:19:50.488+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:50.488+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:19:50.503+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:50.502+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:19:50.533+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.057 seconds
+[2026-04-28T18:20:21.288+0000] {processor.py:161} INFO - Started process (PID=29882) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:21.289+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:20:21.290+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:21.289+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:22.013+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:22.040+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:22.039+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:20:22.066+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:22.061+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:20:22.184+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 0.900 seconds
+[2026-04-28T18:20:52.957+0000] {processor.py:161} INFO - Started process (PID=29940) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:52.959+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:20:52.960+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:52.960+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:53.789+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:20:53.822+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:53.821+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:20:54.141+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:54.140+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:20:54.183+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.230 seconds
+[2026-04-28T18:21:25.027+0000] {processor.py:161} INFO - Started process (PID=29998) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:25.033+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:21:25.039+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:25.038+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:27.117+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:27.183+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:27.180+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:21:27.224+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:27.224+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:21:27.320+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 2.299 seconds
+[2026-04-28T18:21:58.098+0000] {processor.py:161} INFO - Started process (PID=30056) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:58.101+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:21:58.102+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:58.102+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:59.046+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:21:59.078+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:59.077+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:21:59.095+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:59.094+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:21:59.117+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.024 seconds
+[2026-04-28T18:22:29.310+0000] {processor.py:161} INFO - Started process (PID=30114) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:22:29.311+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:22:29.313+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:29.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:22:30.190+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:22:30.213+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:30.212+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:22:30.228+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:30.228+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:22:30.266+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 0.960 seconds
+[2026-04-28T18:23:00.651+0000] {processor.py:161} INFO - Started process (PID=30172) to work on /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:23:00.652+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/mlflow_tracking_dag.py for tasks to queue
+[2026-04-28T18:23:00.653+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:23:00.653+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:23:02.044+0000] {processor.py:840} INFO - DAG(s) 'mlflow_model_tracking' retrieved from /home/airflow/dags/mlflow_tracking_dag.py
+[2026-04-28T18:23:02.074+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:23:02.072+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:23:02.089+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:23:02.089+0000] {dag.py:3823} INFO - Setting next_dagrun for mlflow_model_tracking to None, run_after=None
+[2026-04-28T18:23:02.117+0000] {processor.py:183} INFO - Processing /home/airflow/dags/mlflow_tracking_dag.py took 1.472 seconds

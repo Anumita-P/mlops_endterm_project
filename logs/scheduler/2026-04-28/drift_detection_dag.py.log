@@ -42378,3 +42378,341 @@ airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDag
 **kwargs: {'mode': 'poke'}
 [2026-04-28T18:16:07.209+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
 [2026-04-28T18:16:07.231+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.506 seconds
+[2026-04-28T18:16:37.601+0000] {processor.py:161} INFO - Started process (PID=29463) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:16:37.603+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:16:37.605+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:37.604+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:16:39.015+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:39.008+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:16:39.016+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:16:39.076+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.481 seconds
+[2026-04-28T18:17:09.907+0000] {processor.py:161} INFO - Started process (PID=29521) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:09.909+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:17:09.911+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:09.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:11.098+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:11.092+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:17:11.099+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:11.133+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.234 seconds
+[2026-04-28T18:17:41.244+0000] {processor.py:161} INFO - Started process (PID=29579) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:41.246+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:17:41.247+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:41.247+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:42.096+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:17:42.090+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:17:42.097+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:17:42.117+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 0.877 seconds
+[2026-04-28T18:18:13.001+0000] {processor.py:161} INFO - Started process (PID=29637) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:13.002+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:18:13.003+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:13.003+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:13.710+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:13.702+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:18:13.711+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:13.733+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 0.735 seconds
+[2026-04-28T18:18:43.836+0000] {processor.py:161} INFO - Started process (PID=29695) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:43.837+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:18:43.839+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:43.838+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:44.860+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:18:44.854+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:18:44.862+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:18:44.898+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.065 seconds
+[2026-04-28T18:19:15.016+0000] {processor.py:161} INFO - Started process (PID=29753) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:15.017+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:19:15.019+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:15.018+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:16.046+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:16.040+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:19:16.047+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:16.075+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.064 seconds
+[2026-04-28T18:19:46.428+0000] {processor.py:161} INFO - Started process (PID=29811) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:46.430+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:19:46.432+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:46.431+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:47.786+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:19:47.777+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:19:47.788+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:19:47.817+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.396 seconds
+[2026-04-28T18:20:18.246+0000] {processor.py:161} INFO - Started process (PID=29869) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:18.248+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:20:18.250+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:18.249+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:19.335+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:19.327+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:20:19.337+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:19.368+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.131 seconds
+[2026-04-28T18:20:49.922+0000] {processor.py:161} INFO - Started process (PID=29927) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:49.924+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:20:49.925+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:49.924+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:50.846+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:20:50.836+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:20:50.848+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:20:50.875+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 0.956 seconds
+[2026-04-28T18:21:21.286+0000] {processor.py:161} INFO - Started process (PID=29985) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:21.288+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:21:21.293+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:21.292+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:22.920+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:22.886+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:21:22.923+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:22.966+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.686 seconds
+[2026-04-28T18:21:53.520+0000] {processor.py:161} INFO - Started process (PID=30043) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:53.522+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:21:53.523+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:53.523+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:55.250+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:21:55.240+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:21:55.252+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:21:55.283+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.768 seconds
+[2026-04-28T18:22:25.675+0000] {processor.py:161} INFO - Started process (PID=30101) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:25.676+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:22:25.677+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:25.677+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:27.179+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:27.165+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:22:27.183+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:27.212+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.540 seconds
+[2026-04-28T18:22:57.488+0000] {processor.py:161} INFO - Started process (PID=30159) to work on /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:57.490+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-04-28T18:22:57.492+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:57.491+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:58.717+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:22:58.711+0000] {dagbag.py:348} ERROR - Failed to import: /home/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/airflow/dags/drift_detection_dag.py", line 266, in <module>
+    trigger_retraining = TriggerDagRunOperator(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/trigger_dagrun.py", line 122, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to TriggerDagRunOperator (task_id: trigger_retraining). Invalid arguments were:
+**kwargs: {'mode': 'poke'}
+[2026-04-28T18:22:58.718+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/airflow/dags/drift_detection_dag.py
+[2026-04-28T18:22:58.742+0000] {processor.py:183} INFO - Processing /home/airflow/dags/drift_detection_dag.py took 1.259 seconds

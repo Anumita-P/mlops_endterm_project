@@ -64855,3 +64855,161 @@ File Path                                      PID    Runtime      # DAGs    # E
 ================================================================================
 [2026-04-28T18:16:31.335+0000] {manager.py:738} INFO - Searching for files in /home/airflow/dags
 [2026-04-28T18:16:31.390+0000] {manager.py:741} INFO - There are 5 files in /home/airflow/dags
+[2026-04-28T18:16:59.747+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.52s           2026-04-28T18:16:39
+/home/airflow/dags/data_merge_dag.py           29515  0.01s             1           0  0.50s           2026-04-28T18:16:29
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.12s           2026-04-28T18:16:51
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.04s           2026-04-28T18:16:40
+/home/airflow/dags/model_training_dag.py                                1           0  1.85s           2026-04-28T18:16:39
+================================================================================
+[2026-04-28T18:17:30.428+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.30s           2026-04-28T18:17:11
+/home/airflow/dags/data_merge_dag.py                                    1           0  1.02s           2026-04-28T18:17:00
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.12s           2026-04-28T18:17:23
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.05s           2026-04-28T18:17:12
+/home/airflow/dags/model_training_dag.py                                1           0  1.75s           2026-04-28T18:17:11
+================================================================================
+[2026-04-28T18:18:00.852+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  0.92s           2026-04-28T18:17:42
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.67s           2026-04-28T18:17:32
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.65s           2026-04-28T18:17:55
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.03s           2026-04-28T18:17:43
+/home/airflow/dags/model_training_dag.py                                1           0  1.27s           2026-04-28T18:17:43
+================================================================================
+[2026-04-28T18:18:31.006+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  0.77s           2026-04-28T18:18:13
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.69s           2026-04-28T18:18:02
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.22s           2026-04-28T18:18:26
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.21s           2026-04-28T18:18:14
+/home/airflow/dags/model_training_dag.py                                1           0  1.82s           2026-04-28T18:18:15
+================================================================================
+[2026-04-28T18:19:01.757+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.11s           2026-04-28T18:18:44
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.66s           2026-04-28T18:18:33
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.41s           2026-04-28T18:18:58
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.44s           2026-04-28T18:18:47
+/home/airflow/dags/model_training_dag.py                                1           0  1.73s           2026-04-28T18:18:47
+================================================================================
+[2026-04-28T18:19:31.905+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.11s           2026-04-28T18:19:16
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.63s           2026-04-28T18:19:04
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.56s           2026-04-28T18:19:30
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.16s           2026-04-28T18:19:19
+/home/airflow/dags/model_training_dag.py                                1           0  1.50s           2026-04-28T18:19:19
+================================================================================
+[2026-04-28T18:20:02.792+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.44s           2026-04-28T18:19:47
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.54s           2026-04-28T18:19:35
+/home/airflow/dags/feature_engineering_dag.py  29850  1.02s             1           0  1.56s           2026-04-28T18:19:30
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.15s           2026-04-28T18:19:50
+/home/airflow/dags/model_training_dag.py                                1           0  1.71s           2026-04-28T18:19:51
+================================================================================
+[2026-04-28T18:20:33.406+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.19s           2026-04-28T18:20:19
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.60s           2026-04-28T18:20:06
+/home/airflow/dags/feature_engineering_dag.py  29908  0.00s             1           0  1.25s           2026-04-28T18:20:03
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  0.95s           2026-04-28T18:20:22
+/home/airflow/dags/model_training_dag.py                                1           0  1.02s           2026-04-28T18:20:23
+================================================================================
+[2026-04-28T18:21:03.495+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.00s           2026-04-28T18:20:50
+/home/airflow/dags/data_merge_dag.py                                    1           0  1.22s           2026-04-28T18:20:37
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.23s           2026-04-28T18:20:34
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.28s           2026-04-28T18:20:54
+/home/airflow/dags/model_training_dag.py                                1           0  1.44s           2026-04-28T18:20:55
+================================================================================
+[2026-04-28T18:21:31.544+0000] {manager.py:738} INFO - Searching for files in /home/airflow/dags
+[2026-04-28T18:21:31.593+0000] {manager.py:741} INFO - There are 5 files in /home/airflow/dags
+[2026-04-28T18:21:33.627+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.76s           2026-04-28T18:21:23
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.47s           2026-04-28T18:21:09
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.35s           2026-04-28T18:21:06
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  2.50s           2026-04-28T18:21:27
+/home/airflow/dags/model_training_dag.py                                1           0  2.72s           2026-04-28T18:21:28
+================================================================================
+[2026-04-28T18:22:04.248+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.82s           2026-04-28T18:21:55
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.52s           2026-04-28T18:21:39
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.41s           2026-04-28T18:21:38
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.07s           2026-04-28T18:21:59
+/home/airflow/dags/model_training_dag.py                                1           0  1.27s           2026-04-28T18:22:00
+================================================================================
+[2026-04-28T18:22:34.855+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.59s           2026-04-28T18:22:27
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.46s           2026-04-28T18:22:10
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.73s           2026-04-28T18:22:10
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.00s           2026-04-28T18:22:30
+/home/airflow/dags/model_training_dag.py                                1           0  1.19s           2026-04-28T18:22:31
+================================================================================
+[2026-04-28T18:23:05.187+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/dags/drift_detection_dag.py                               0           1  1.31s           2026-04-28T18:22:58
+/home/airflow/dags/data_merge_dag.py                                    1           0  0.45s           2026-04-28T18:22:41
+/home/airflow/dags/feature_engineering_dag.py                           1           0  1.18s           2026-04-28T18:22:41
+/home/airflow/dags/mlflow_tracking_dag.py                               1           0  1.52s           2026-04-28T18:23:02
+/home/airflow/dags/model_training_dag.py                                1           0  1.40s           2026-04-28T18:23:03
+================================================================================

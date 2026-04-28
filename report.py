@@ -1198,21 +1198,9 @@ for q, a in faqs:
         Spacer(1, 3),
     ]))
 
-story.append(Paragraph("5.8 Contacting Support", h2))
-story.append(Paragraph(
-    "If you encounter a technical problem with the system (for example, the page does not load "
-    "or you receive an error message), please contact the project maintainer:", body))
-for line in code_block("GitHub Issues : https://github.com/Anumita-P/mlops_endterm_project/issues\nEmail         : anumitap@example.com"):
-    story.append(line)
-story.append(Paragraph(
-    "For agricultural advice beyond what the chatbot provides, contact your nearest "
-    "Krishi Vigyan Kendra (KVK) or the Tamil Nadu Agricultural University (TNAU) extension services.", body))
 
 story.append(Spacer(1, 1*cm))
 story.append(HR())
-story.append(Paragraph(
-    "End of Report — Krishi Sahaya Technical Documentation, Version 1.0.0, April 2026",
-    S("Normal", fontSize=9, alignment=TA_CENTER, textColor=DARK, fontName="Helvetica-Oblique")))
 
 # ── Build ─────────────────────────────────────────────────────────────────────
 import os

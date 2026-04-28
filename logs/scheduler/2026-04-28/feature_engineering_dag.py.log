@@ -11310,3 +11310,80 @@
 [2026-04-28T18:10:31.385+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:10:31.384+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-04-28T18:10:31.409+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:10:31.409+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
 [2026-04-28T18:10:31.436+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.246 seconds
+[2026-04-28T18:11:01.526+0000] {processor.py:161} INFO - Started process (PID=28864) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:01.528+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:11:01.531+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:01.530+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:02.966+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:02.997+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:02.996+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:11:03.022+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:03.022+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:11:03.047+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.525 seconds
+[2026-04-28T18:11:33.198+0000] {processor.py:161} INFO - Started process (PID=28922) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:33.200+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:11:33.201+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:33.200+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:34.107+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:11:34.127+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:34.127+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:11:34.148+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:34.148+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:11:34.172+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 0.977 seconds
+[2026-04-28T18:12:04.273+0000] {processor.py:161} INFO - Started process (PID=28980) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:04.274+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:12:04.275+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:04.275+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:05.235+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:05.253+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:05.253+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:12:05.272+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:05.272+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:12:05.292+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.024 seconds
+[2026-04-28T18:12:36.199+0000] {processor.py:161} INFO - Started process (PID=29038) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:36.201+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:12:36.203+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:36.202+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:37.617+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:12:37.643+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:37.643+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:12:37.669+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:37.668+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:12:37.695+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.502 seconds
+[2026-04-28T18:13:07.989+0000] {processor.py:161} INFO - Started process (PID=29096) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:07.990+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:13:07.992+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:07.991+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:09.246+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:09.275+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:09.275+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:13:09.299+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:09.298+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:13:09.330+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.345 seconds
+[2026-04-28T18:13:39.469+0000] {processor.py:161} INFO - Started process (PID=29154) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:39.470+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:13:39.471+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:39.471+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:40.348+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:13:40.367+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:40.366+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:13:40.385+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:40.385+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:13:40.410+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 0.944 seconds
+[2026-04-28T18:14:10.653+0000] {processor.py:161} INFO - Started process (PID=29212) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:10.655+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:14:10.657+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:10.656+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:12.441+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:12.472+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:12.472+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:14:12.505+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:12.504+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:14:12.548+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.898 seconds
+[2026-04-28T18:14:43.302+0000] {processor.py:161} INFO - Started process (PID=29270) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:43.304+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:14:43.305+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:43.304+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:44.167+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:14:44.185+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:44.185+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:14:44.205+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:44.205+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:14:44.227+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 0.928 seconds
+[2026-04-28T18:15:15.025+0000] {processor.py:161} INFO - Started process (PID=29328) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:15.026+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:15:15.030+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:15.028+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:16.620+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:16.655+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:16.654+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:15:16.689+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:16.689+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:15:16.728+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.709 seconds
+[2026-04-28T18:15:46.824+0000] {processor.py:161} INFO - Started process (PID=29386) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:46.826+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:15:46.827+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:46.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:47.889+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:15:47.920+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:47.920+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:15:47.950+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:47.950+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:15:47.979+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.159 seconds
+[2026-04-28T18:16:18.421+0000] {processor.py:161} INFO - Started process (PID=29444) to work on /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:16:18.422+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/feature_engineering_dag.py for tasks to queue
+[2026-04-28T18:16:18.423+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:18.422+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:16:19.591+0000] {processor.py:840} INFO - DAG(s) 'feature_engineering_pipeline' retrieved from /home/airflow/dags/feature_engineering_dag.py
+[2026-04-28T18:16:19.612+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:19.611+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:16:19.644+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:19.644+0000] {dag.py:3823} INFO - Setting next_dagrun for feature_engineering_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:16:19.680+0000] {processor.py:183} INFO - Processing /home/airflow/dags/feature_engineering_dag.py took 1.263 seconds

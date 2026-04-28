@@ -11478,3 +11478,80 @@
 [2026-04-28T18:10:48.042+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:10:48.041+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-04-28T18:10:48.062+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:10:48.062+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
 [2026-04-28T18:10:48.087+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.422 seconds
+[2026-04-28T18:11:18.188+0000] {processor.py:161} INFO - Started process (PID=28877) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:18.189+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:11:18.190+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:18.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:18.491+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:18.511+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:18.511+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:11:18.531+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:18.531+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:11:18.552+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.368 seconds
+[2026-04-28T18:11:49.408+0000] {processor.py:161} INFO - Started process (PID=28935) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:49.409+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:11:49.411+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:49.410+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:49.743+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:11:49.775+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:49.775+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:11:49.974+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:11:49.974+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:11:50.000+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.597 seconds
+[2026-04-28T18:12:20.530+0000] {processor.py:161} INFO - Started process (PID=28993) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:20.532+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:12:20.534+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:20.533+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:20.840+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:21.031+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:21.031+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:12:21.050+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:21.050+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:12:21.076+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.552 seconds
+[2026-04-28T18:12:51.625+0000] {processor.py:161} INFO - Started process (PID=29051) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:51.636+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:12:51.640+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:51.639+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:52.327+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:12:52.345+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:52.345+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:12:52.361+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:12:52.361+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:12:52.382+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.779 seconds
+[2026-04-28T18:13:22.588+0000] {processor.py:161} INFO - Started process (PID=29109) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:22.590+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:13:22.594+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:22.591+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:23.151+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:23.179+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:23.178+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:13:23.208+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:23.208+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:13:23.237+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.657 seconds
+[2026-04-28T18:13:53.627+0000] {processor.py:161} INFO - Started process (PID=29167) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:53.629+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:13:53.631+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:53.630+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:54.567+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:13:54.586+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:54.585+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:13:54.610+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:13:54.610+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:13:54.630+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 1.007 seconds
+[2026-04-28T18:14:24.769+0000] {processor.py:161} INFO - Started process (PID=29225) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:24.771+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:14:24.772+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:24.772+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:25.290+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:25.335+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:25.333+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:14:25.409+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:25.409+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:14:25.485+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.719 seconds
+[2026-04-28T18:14:55.767+0000] {processor.py:161} INFO - Started process (PID=29283) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:55.769+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:14:55.771+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:55.770+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:56.549+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:14:56.579+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:56.579+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:14:56.611+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:14:56.610+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:14:56.657+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.895 seconds
+[2026-04-28T18:15:27.003+0000] {processor.py:161} INFO - Started process (PID=29341) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:27.005+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:15:27.007+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:27.007+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:27.556+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:27.585+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:27.584+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:15:27.611+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:27.611+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:15:27.641+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.649 seconds
+[2026-04-28T18:15:57.951+0000] {processor.py:161} INFO - Started process (PID=29399) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:57.952+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:15:57.954+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:57.953+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:58.515+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:15:58.543+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:58.543+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:15:58.567+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:15:58.567+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:15:58.587+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.640 seconds
+[2026-04-28T18:16:28.835+0000] {processor.py:161} INFO - Started process (PID=29457) to work on /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:16:28.836+0000] {processor.py:830} INFO - Processing file /home/airflow/dags/data_merge_dag.py for tasks to queue
+[2026-04-28T18:16:28.837+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:28.837+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:16:29.236+0000] {processor.py:840} INFO - DAG(s) 'data_merge_pipeline' retrieved from /home/airflow/dags/data_merge_dag.py
+[2026-04-28T18:16:29.256+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:29.255+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-28T18:16:29.273+0000] {logging_mixin.py:188} INFO - [2026-04-28T18:16:29.273+0000] {dag.py:3823} INFO - Setting next_dagrun for data_merge_pipeline to 2026-05-03 00:00:00+00:00, run_after=2026-05-10 00:00:00+00:00
+[2026-04-28T18:16:29.296+0000] {processor.py:183} INFO - Processing /home/airflow/dags/data_merge_dag.py took 0.466 seconds

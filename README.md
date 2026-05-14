@@ -1,4 +1,3 @@
-Here is a fully copy-paste ready README.md (clean, professional, no emojis, no formatting issues):
 
 # Krishi Sahaya – AI-Powered Agricultural Decision Support System
 
